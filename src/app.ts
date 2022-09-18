@@ -7,6 +7,7 @@ import userRoute from './routes/userRoute'
 import apiErrorHandler from './middlewares/apiErrorHandler'
 import apiContentType from './middlewares/apiContentType'
 import bodyParser from 'body-parser';
+import orderRoute from './routes/orderRoute';
 
 dotenv.config({ path: '.env' })
 const app = express()
@@ -23,6 +24,7 @@ app.use(express.json())
 // Set up routes
 app.use('/api/', productRoute)
 app.use('/api/',userRoute)
+app.use('/api/',orderRoute)
 
 // Custom API error handler
 app.use(apiErrorHandler)
