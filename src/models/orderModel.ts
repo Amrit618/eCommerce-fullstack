@@ -4,7 +4,7 @@ export type OrderDocument = Document & {
   customer: string
   address: string
   total: number
-  status: 0 | 1 | 2 | 3
+  status: 0 | 1 
 }
 
 const orderSchema = new mongoose.Schema({
