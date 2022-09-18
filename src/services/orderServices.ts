@@ -5,7 +5,7 @@ const getOrders = async () => {
   return await Order.find()
 }
 
-const getOrderById = async (orderId: string) => {
+const getOrderById = async (orderId: string) =>{
   const existedOrder = await Order.findById(orderId)
   if (!existedOrder) {
     throw new NotFoundError('Order does not exist')
