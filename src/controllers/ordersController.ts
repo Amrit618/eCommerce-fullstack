@@ -7,7 +7,7 @@ const getOrders = async (req: Request, res: Response, next: NextFunction) => {
     const orders = await orderService.getOrders()
     return res.json(orders)
   } catch (err) {
-    next(err)
+     next(err)
   }
 }
 
